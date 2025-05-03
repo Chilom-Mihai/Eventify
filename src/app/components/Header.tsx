@@ -5,7 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
+  const [openOrganizeaza, setOpenOrganizeaza] = useState(false);
+  const [openPreturi, setOpenPreturi] = useState(false);
 
   return (
     <header className="bg-blue-700 text-white py-4 px-6 flex justify-between items-center relative z-50">
@@ -20,27 +21,27 @@ export default function Header() {
         />
       </Link>
 
-      <nav className="flex gap-6 items-center relative justify-center w-[100%]">
+      <nav className="flex gap-6 items-center relative justify-center w-full">
         <Link href="/despre-noi" className="hover:text-blue-300">
           Despre noi
         </Link>
+
+        {/* Organizează eveniment */}
         <div
           className="relative"
-          onMouseEnter={() => setOpen(true)}
-          onMouseLeave={() => setOpen(false)}
+          onMouseEnter={() => setOpenOrganizeaza(true)}
+          onMouseLeave={() => setOpenOrganizeaza(false)}
         >
-          {/* Trigger */}
           <button className="text-white hover:text-blue-300 relative flex items-center gap-1">
             Organizează eveniment
             <span className="transition-transform duration-200">
-              {open ? "▴" : "▾"}
+              {openOrganizeaza ? "▴" : "▾"}
             </span>
           </button>
 
-          {/* Dropdown fără spațiu între el și buton */}
           <div
             className={`absolute left-0 top-full w-44 rounded-md shadow-lg bg-white text-black p-3 z-40 transition-all duration-150 ${
-              open ? "opacity-100 visible" : "opacity-0 invisible"
+              openOrganizeaza ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           >
             <ul className="flex flex-col space-y-2 p-2">
@@ -64,14 +65,56 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Alte linkuri */}
-
+        {/* Invitații */}
         <Link href="/invitatii" className="hover:text-blue-300">
           Invitații
         </Link>
-        <Link href="/preturi" className="hover:text-blue-300">
-          Prețuri
+
+        {/* Cum functioneaza */}
+        <Link href="/cum-functioneaza" className="hover:text-blue-300">
+          Cum functioneaza?
         </Link>
+
+        {/* Prețuri */}
+        <div
+          className="relative"
+          onMouseEnter={() => setOpenPreturi(true)}
+          onMouseLeave={() => setOpenPreturi(false)}
+        >
+          <button className="text-white hover:text-blue-300 relative flex items-center gap-1">
+            Prețuri
+            <span className="transition-transform duration-200">
+              {openPreturi ? "▴" : "▾"}
+            </span>
+          </button>
+
+          <div
+            className={`absolute left-0 top-full w-[190px] rounded-md shadow-lg bg-white text-black p-3 z-40 transition-all duration-150 ${
+              openPreturi ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+          >
+            <ul className="flex flex-col space-y-2 p-2">
+              <li>
+                <Link
+                  href="/evenimente-private"
+                  className="block hover:text-sky-500"
+                >
+                  Evenimente private
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/evenimente-business"
+                  className="block hover:text-sky-500"
+                >
+                  Evenimente business
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Contact, Login, Înregistrare */}
         <Link href="/contact" className="hover:text-blue-300">
           Contact
         </Link>
