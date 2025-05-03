@@ -2,17 +2,28 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="bg-blue-700 text-white py-4 px-6 flex justify-between items-center relative z-50">
-      <Link href={"/"} className="text-xl font-bold">
-        Eventify
+      <Link href="/" className="block w-[150px] h-auto relative">
+        <Image
+          src="/Images/Logo.png"
+          alt="Eventify logo"
+          width={75}
+          height={75}
+          className="object-contain"
+          priority
+        />
       </Link>
 
       <nav className="flex gap-6 items-center relative justify-center w-[100%]">
+        <Link href="/despre-noi" className="hover:text-blue-300">
+          Despre noi
+        </Link>
         <div
           className="relative"
           onMouseEnter={() => setOpen(true)}
@@ -54,9 +65,7 @@ export default function Header() {
         </div>
 
         {/* Alte linkuri */}
-        <Link href="/despre-noi" className="hover:text-blue-300">
-          Despre noi
-        </Link>
+
         <Link href="/invitatii" className="hover:text-blue-300">
           Invitații
         </Link>
