@@ -42,19 +42,19 @@ export default function DespreNoi() {
         </div>
       </section>
 
-      {/* Secțiunea Imagine + Card suprapus */}
-      <section className="flex justify-center items-center py-20 px-4">
-        <div className="relative w-[600px] h-[500px]">
+      <section className="flex flex-col md:flex-row justify-center items-center py-20 px-4 gap-6">
+        {/* Imaginea */}
+        <div className="relative w-full md:w-[600px] h-[300px] md:h-[500px]">
           <Image
             src="/Images/DespreNoiImage1.png"
             alt="Eventify desk"
-            width={600}
-            height={500}
-            className="rounded-xl shadow-lg object-cover w-full h-full"
+            fill
+            className="rounded-xl shadow-lg object-cover"
           />
         </div>
 
-        <div className="relative -ml-20 z-10 bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-md max-w-md">
+        {/* Cardul suprapus pe desktop, dedesubt pe mobil */}
+        <div className="relative md:-ml-20 mt-6 md:mt-0 z-10 bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-md max-w-md w-full">
           <div className="absolute top-0 left-0 w-16 h-16">
             <svg
               className="w-full h-full text-gray-200"
@@ -78,13 +78,13 @@ export default function DespreNoi() {
           </div>
 
           <h2 className="text-2xl font-bold text-gray-900 mb-4 relative z-10">
-            Ality
+            Eventify
           </h2>
           <p className="text-gray-700 mb-6 leading-relaxed relative z-10">
-            Platforma unică în România de smart event management. Ality susține
-            organizatorii evenimentelor pe întreg parcursul acestora, prin
-            dezvoltarea modulelor inovatoare, totul fiind realizat digital.
-            Ality îmbină transparența, securitatea și facilitează toate
+            Platforma unică în România de smart event management. Eventify
+            susține organizatorii evenimentelor pe întreg parcursul acestora,
+            prin dezvoltarea modulelor inovatoare, totul fiind realizat digital.
+            Eventify îmbină transparența, securitatea și facilitează toate
             procesele organizatorice. Atât organizatorii, cât și participanții,
             vor beneficia de servicii de calitate, pe măsura așteptărilor.
           </p>
