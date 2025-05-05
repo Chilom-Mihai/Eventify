@@ -1,16 +1,19 @@
 "use client";
 
+import DynamicPageHeader from "@/components/ui/DynamicPageHeader";
 import { Check } from "lucide-react";
 
 export default function EvenimentePrivatePachete() {
   return (
-    <section className="w-full px-4 py-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+    <section className="w-full">
+      <DynamicPageHeader />
+
+      <h2 className="text-3xl md:text-4xl font-bold text-center px-4 py-20">
         Prețuri pachete
       </h2>
       <div className="w-20 h-1 mx-auto bg-blue-600 rounded-full mb-12" />
 
-      <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto flex-wrap justify-center">
+      <div className="flex flex-col md:flex-row gap-8 max-w-7xl mx-auto flex-wrap justify-center mb-20">
         {/* Pachet Gratuit */}
         <div className="bg-white shadow-lg rounded-xl px-8 py-[28px] w-full max-w-[600px] transition duration-300 hover:shadow-2xl hover:scale-[1.03] hover:z-10">
           <h3 className="text-center text-sm font-semibold text-gray-600 mb-2">
@@ -83,7 +86,7 @@ export default function EvenimentePrivatePachete() {
           <p className="text-3xl text-center font-bold text-red-500 mb-4">
             119 Lei
           </p>
-          <p className="text-center text-xs bg-gray-100 px-3 py-1 rounded-full font-semibold text-gray-800 mb-6">
+          <p className="text-center text-xs bg-gray-700 text-white px-3 py-1 rounded-full font-semibold mb-6 hover:text-white hover:bg-sky-500 transition-colors duration-500">
             CONȚINE TOTUL DIN PACHET GRATUIT
           </p>
           <ul className="space-y-3 text-base text-gray-700 text-left">
@@ -134,7 +137,7 @@ export default function EvenimentePrivatePachete() {
           <p className="text-3xl text-center font-bold text-red-500 mb-4">
             249 Lei
           </p>
-          <p className="text-center text-xs bg-gray-100 px-3 py-1 rounded-full font-semibold text-gray-800 mb-6">
+          <p className="text-center text-xs bg-gray-700 text-white px-3 py-1 rounded-full font-semibold mb-6 hover:text-white hover:bg-sky-500 transition-colors duration-500">
             CONȚINE TOTUL DIN PACHET GRATUIT
           </p>
           <ul className="space-y-3 text-base text-gray-700 text-left">
@@ -177,6 +180,144 @@ export default function EvenimentePrivatePachete() {
             <li className="flex items-start gap-2">
               <Check className="text-sky-500 w-4 h-4 mt-1" />
               Filtrarea răspunsurilor după anumite criterii
+            </li>
+          </ul>
+        </div>
+        {/* Pachet Premium */}
+        <div className="bg-white shadow-lg rounded-xl px-8 py-[28px] w-full max-w-[600px] transition duration-300 hover:shadow-2xl hover:scale-[1.03] hover:z-10">
+          <h3 className="text-center text-sm font-semibold text-gray-600 mb-2">
+            PACHET PREMIUM
+          </h3>
+          <p className="text-3xl text-center font-bold text-orange-500 mb-4">
+            399 Lei
+          </p>
+          <p className="text-center text-xs bg-gray-700 text-white px-3 py-1 rounded-full font-semibold mb-6 hover:text-white hover:bg-sky-500 transition-colors duration-500">
+            CONȚINE TOTUL DIN INVITAȚIE RĂSPUNSURI NELIMITATE +
+          </p>
+          <ul className="space-y-3 text-base text-gray-700 text-left">
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Vizualizarea nelimitată a răspunsurilor primite de la invitați
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Valabilitate eveniment și invitație 18 luni
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Crearea planului locației cu poziția meselor și a punctelor de
+              interes
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Integrarea în invitație a locațiilor cu Waze / Google Maps
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Aranjarea invitațiilor la mese
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Notificarea invitaților în cazul unor schimbări de program
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Participanții vor putea accesa evenimentul
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Adăugarea mai multor organizatori
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Distribuirea albumelor media către participanți
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Crearea și publicarea listei de cadouri
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Informarea organizatorilor cu privire la numărul invitaților
+              prezenți la eveniment
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Funcția „Smart Check-in” pentru primirea invitațiilor
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Posibilitatea de a exporta toate informațiile din aplicație
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Alegerea hostesselor din lista de invitați
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Invitarea hostesselor din exterior
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Introducerea darului primit de la fiecare invitat
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Publicarea evenimentului în secțiunea evenimentelor private
+            </li>
+          </ul>
+        </div>
+        {/* Pachet Invitatii Digitale Multilanguage */}
+        <div className="bg-white shadow-lg rounded-xl px-8 py-[28px] w-full max-w-[600px] transition duration-300 hover:shadow-2xl hover:scale-[1.03] hover:z-10">
+          <h3 className="text-center text-sm font-semibold text-gray-600 mb-2">
+            PACHET INVITAȚII DIGITALE MULTILANGUAGE
+          </h3>
+          <p className="text-3xl text-center font-bold text-orange-500 mb-4">
+            299 Lei
+          </p>
+          <p className="text-center text-xs bg-gray-700 text-white px-3 py-1 rounded-full font-semibold mb-6 hover:text-white hover:bg-sky-500 transition-colors duration-500">
+            CONȚINE TOTUL DIN INVITAȚIE RĂSPUNSURI NELIMITATE +
+          </p>
+          <ul className="space-y-3 text-base text-gray-700 text-left">
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Crearea a până la maxim 2 invitații
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Valabilitate eveniment și invitație 18 luni
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Invitații în limba română, engleză, franceză, spaniolă, italiană,
+              germană sau maghiară.
+            </li>
+          </ul>
+        </div>
+        {/* PACHET PREMIUM MULTILANGUAGE*/}
+        <div className="bg-white shadow-lg rounded-xl px-8 py-[28px] w-full max-w-[600px] transition duration-300 hover:shadow-2xl hover:scale-[1.03] hover:z-10">
+          <h3 className="text-center text-sm font-semibold text-gray-600 mb-2">
+            PACHET PREMIUM MULTILANGUAGE
+          </h3>
+          <p className="text-3xl text-center font-bold text-orange-500 mb-4">
+            449 Lei
+          </p>
+          <p className="text-center text-xs bg-gray-700 text-white px-3 py-1 rounded-full font-semibold mb-6 hover:text-white hover:bg-sky-500 transition-colors duration-500">
+            CONȚINE TOTUL DIN PREMIUM +
+          </p>
+          <ul className="space-y-3 text-base text-gray-700 text-left">
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Crearea a până la maxim 3 invitații
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Valabilitate eveniment și invitație 18 luni
+            </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-sky-500 w-4 h-4 mt-1" />
+              Invitații în limba română, engleză, franceză, spaniolă, italiană,
+              germană sau maghiară.
             </li>
           </ul>
         </div>
