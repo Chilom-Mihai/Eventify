@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function Header() {
   const [openOrganizeaza, setOpenOrganizeaza] = useState(false);
   const [openPreturi, setOpenPreturi] = useState(false);
+  const [openInvitatii, setOpenInvitatii] = useState(false);
 
   return (
     <header className="bg-blue-700 text-white py-4 px-6 flex justify-between items-center relative z-50">
@@ -65,10 +66,43 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Invitații */}
-        <Link href="/invitatii" className="hover:text-blue-300">
-          Invitații
-        </Link>
+        {/* Invitații digitale */}
+        <div
+          className="relative"
+          onMouseEnter={() => setOpenInvitatii(true)}
+          onMouseLeave={() => setOpenInvitatii(false)}
+        >
+          <button className="text-white hover:text-blue-300 relative flex items-center gap-1">
+            Invitații digitale
+            <span className="transition-transform duration-200">
+              {openInvitatii ? "▴" : "▾"}
+            </span>
+          </button>
+          <div
+            className={`absolute left-0 top-full w-48 rounded-md shadow-lg bg-white text-black p-3 z-40 transition-all duration-150 ${
+              openInvitatii ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
+          >
+            <ul className="flex flex-col space-y-2 p-2">
+              <li>
+                <Link
+                  href="/invitatii/creare"
+                  className="block hover:text-sky-500"
+                >
+                  Evenimente private
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/invitatii/bilete"
+                  className="block hover:text-sky-500"
+                >
+                  Evenimente business
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         {/* Cum functioneaza */}
         <Link href="/cum-functioneaza" className="hover:text-blue-300">

@@ -1,7 +1,7 @@
-export default function DespreNoi() {
+export default function InvitatiiDigitalePrivate() {
   return (
     <div className="p-8">
-      <h1 className="text-3xl font-bold">Invitatii</h1>
+      <h1 className="text-3xl font-bold">Private invitatii</h1>
       <p className="mt-4">Aceasta este pagina Despre Noi.</p>
     </div>
   );
