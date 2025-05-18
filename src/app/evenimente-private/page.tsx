@@ -2,6 +2,9 @@
 
 import DynamicPageHeader from "@/components/ui/DynamicPageHeader";
 import { Check } from "lucide-react";
+import Image from "next/image";
+import AnimatedIcon from "../../../public/Images/AnimatedIcon.png";
+import CompararePachete from "@/components/ui/CompararePachete";
 
 export default function EvenimentePrivatePachete() {
   return (
@@ -321,6 +324,37 @@ export default function EvenimentePrivatePachete() {
             </li>
           </ul>
         </div>
+
+        <section className="bg-white py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-sm mx-auto bg-white shadow-lg rounded-xl p-8 text-center">
+            <Image
+              src={AnimatedIcon}
+              alt="Animated invitations icon"
+              width={64}
+              height={64}
+              className="mx-auto mb-4"
+              priority
+            />
+
+            <h3 className="text-xl font-semibold text-sky-500 mb-4">
+              Pachet Invitații animate
+            </h3>
+
+            <p className="text-gray-600 mb-6">
+              Adăugarea de animații în cadrul invitațiilor create în aplicația
+              Eventify necesită achiziționarea unui pachet adițional.
+              <br />
+              Aceasta se achiziționează o singură dată per eveniment, după
+              alegerea unui pachet principal.
+            </p>
+
+            <p className="text-3xl font-bold text-gray-800 mb-2">50 Lei</p>
+            <p className="text-xs text-gray-500">
+              *prețul poate să difere în funcție de tipul evenimentului
+            </p>
+          </div>
+        </section>
+        <CompararePachete />
       </div>
     </section>
   );

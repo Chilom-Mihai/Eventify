@@ -118,11 +118,15 @@ export default function Header() {
         <Link href="/contact" className="hover:text-blue-300">
           Contact
         </Link>
-        <Link href="/login" className="hover:text-blue-300">
-          Login
+        <Link href="/inregistrare">
+          <button className="bg-[#1A165F] text-white px-4 py-2 rounded-full hover:bg-[#2a2a6a] transition">
+            Înregistrare
+          </button>
         </Link>
-        <Link href="/inregistrare" className="hover:text-blue-300">
-          Înregistrare
+        <Link href="/login">
+          <button className="bg-[#1A165F] text-white px-4 py-2 rounded-full hover:bg-[#2a2a6a] transition">
+            Login
+          </button>
         </Link>
       </nav>
     </header>
